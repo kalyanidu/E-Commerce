@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="DELETE">
+        <access_method>btree</access_method>
+        <col_name_string>customer_name,email,address</col_name_string>
+        <index_col_name>084ec293c3e02210258ad4fc05013189,f16e4edbc3a02210258ad4fc050131e2,557e4a13c3e02210258ad4fc050131c1</index_col_name>
+        <logical_table_name>x_1585559_ecommerc_customer</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2025-04-04 08:33:06</sys_created_on>
+        <sys_id>8cc3c904c3742210258ad4fc05013161</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1585559_ecommerc_customer</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>sys_index_x_1585559_ecommerc_customer_customer_name_email_address</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-04-04 08:33:06</sys_updated_on>
+        <table display_value="Customer" name="x_1585559_ecommerc_customer">6f3e469fc3a02210258ad4fc0501315e</table>
+        <unique_index>false</unique_index>
+    </sys_index>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</application>
+        <file_path/>
+        <instance_id>00dacfbdeb689ad4cbdefceacad0cde1</instance_id>
+        <instance_name>dev288583</instance_name>
+        <name>sys_index_x_1585559_ecommerc_customer_customer_name_email_address</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index"><sys_index action="INSERT_OR_UPDATE"><access_method>btree</access_method><col_name_string>customer_name,email,address</col_name_string><index_col_name>084ec293c3e02210258ad4fc05013189,f16e4edbc3a02210258ad4fc050131e2,557e4a13c3e02210258ad4fc050131c1</index_col_name><logical_table_name>x_1585559_ecommerc_customer</logical_table_name><sys_class_name>sys_index</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2025-04-04 08:33:06</sys_created_on><sys_id>8cc3c904c3742210258ad4fc05013161</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1585559_ecommerc_customer</sys_name><sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package><sys_policy/><sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope><sys_update_name>sys_index_x_1585559_ecommerc_customer_customer_name_email_address</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2025-04-04 08:33:06</sys_updated_on><table display_value="Customer" name="x_1585559_ecommerc_customer">6f3e469fc3a02210258ad4fc0501315e</table><unique_index>false</unique_index></sys_index></record_update>]]></payload>
+        <payload_hash>-278195640</payload_hash>
+        <record_name>Customer: Customer Name, Email, Address</record_name>
+        <reverted_from/>
+        <source>dc5db557c3a02210258ad4fc050131d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2025-04-04 08:33:06</sys_created_on>
+        <sys_id>54c3c904c3742210258ad4fc0501318b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195ffeeabb10000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-04-04 08:33:06</sys_updated_on>
+        <type>Indexes</type>
+        <update_guid>10c3c904da742210aa7b924e0574e665</update_guid>
+        <update_guid_history>10c3c904da742210aa7b924e0574e665:-278195640</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2025-04-04 08:35:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_index">sys_index</sys_db_object>
+        <sys_id>06c7473366ca48d4844e27ea45768b64</sys_id>
+        <sys_metadata>8cc3c904c3742210258ad4fc05013161</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1585559_ecommerc_customer</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_scope_delete display_value="">a0e2861d80604c18bf1195f2b42efec4</sys_scope_delete>
+        <sys_update_name>sys_index_x_1585559_ecommerc_customer_customer_name_email_address</sys_update_name>
+        <sys_update_version display_value="sys_index_x_1585559_ecommerc_customer_customer_name_email_address">54c3c904c3742210258ad4fc0501318b</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-04-04 08:35:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

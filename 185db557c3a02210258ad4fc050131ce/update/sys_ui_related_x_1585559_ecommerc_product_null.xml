@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_1585559_ecommerc_product" version="2" view="">
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Product - </calculated_name>
+            <filter/>
+            <name>x_1585559_ecommerc_product</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-04-02 09:56:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8a93c75fc3e42210258ad4fc050131b1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Product - </sys_name>
+            <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+            <sys_update_name>sys_ui_related_x_1585559_ecommerc_product_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-04-02 09:56:39</sys_updated_on>
+            <sys_user/>
+            <view/>
+            <view_name/>
+        </sys_ui_related_list>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Product - </calculated_name>
+            <filter/>
+            <name>x_1585559_ecommerc_product</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-04-02 09:56:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8a93c75fc3e42210258ad4fc050131b1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Product - </sys_name>
+            <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+            <sys_update_name>sys_ui_related_x_1585559_ecommerc_product_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-04-02 09:56:39</sys_updated_on>
+            <sys_user/>
+            <view/>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

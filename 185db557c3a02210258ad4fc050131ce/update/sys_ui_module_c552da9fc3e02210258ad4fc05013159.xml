@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Ecommerce">d4f0829bc3a02210258ad4fc05013199</application>
+        <filter/>
+        <name>Order Items</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>admin</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-02 06:20:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c552da9fc3e02210258ad4fc05013159</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Order Items</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>sys_ui_module_c552da9fc3e02210258ad4fc05013159</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-02 06:20:57</sys_updated_on>
+        <table>x_1585559_ecommerc_order_items</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="67031e13c3242210258ad4fc05013141" label="Transactions" max_length="40" name="x_1585559_ecommerc_transactions" type="collection">
+        <element choice="1" label="Payment Status" max_length="40" name="payment_status" type="choice">
+            <choice/>
+        </element>
+        <element label="Order" max_length="32" name="order" reference="x_1585559_ecommerc_x_1585559_ecommerce" type="reference"/>
+        <element label="Amount" max_length="20" name="amount" type="currency"/>
+        <element label="Transaction Date" max_length="40" name="transaction_date" type="glide_date_time"/>
+        <element label="Transaction ID" max_length="40" name="transaction_id" type="string"/>
+        <element choice="1" label="Payment Method" max_length="40" name="payment_method" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="COD" value="cod"/>
+                <element inactive_on_update="false" label="Net Banking" value="net-banking"/>
+                <element inactive_on_update="false" label="Credit Card" value="credit-card"/>
+                <element inactive_on_update="false" label="UPI" value="upi"/>
+                <element inactive_on_update="false" label="Debit Card" value="debit-card"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="order"/>
+        </index>
+    </element>
+</database>

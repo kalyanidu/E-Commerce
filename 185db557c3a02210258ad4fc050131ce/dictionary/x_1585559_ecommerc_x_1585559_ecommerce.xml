@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c82eb997c3a02210258ad4fc05013167" label=" E-commerce" max_length="40" name="x_1585559_ecommerc_x_1585559_ecommerce" type="collection">
+        <element label="Order_Id" max_length="40" name="order_id" type="string"/>
+        <element choice="1" label="Payment Method" max_length="40" name="payment_method" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="COD" value="cod"/>
+                <element inactive_on_update="false" label="UPI" value="upi"/>
+                <element inactive_on_update="false" label="Net Banking" value="net-banking"/>
+                <element inactive_on_update="false" label="Debit Card" value="debit-card"/>
+                <element inactive_on_update="false" label="Credit Card" value="credit-card"/>
+            </choice>
+        </element>
+        <element label="Delivery Date" max_length="40" name="delivery_date" type="glide_date"/>
+        <element choice="1" label="Order Status" max_length="40" name="order_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Delivered" value="Delivered"/>
+                <element inactive_on_update="false" label="Canceled" value="Cancled"/>
+                <element inactive_on_update="false" label="Pending" value="Pending"/>
+                <element inactive_on_update="false" label="Shipped" value="Shipped"/>
+            </choice>
+        </element>
+        <element label="Customer Email" max_length="40" name="customer_email" type="string"/>
+        <element display="true" label="Product Name" max_length="32" name="product_name" reference="x_1585559_ecommerc_product" type="reference"/>
+        <element label="Comments" max_length="4000" name="comments" type="journal"/>
+        <element label="Order Date" max_length="40" name="order_date" type="glide_date"/>
+        <element label="Total Amount" max_length="20" name="total_amount" type="currency"/>
+        <element label="Shipping Address" max_length="40" name="shipping_address" type="string"/>
+        <element choice="1" label="Payment Status" max_length="40" name="payment_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Unpaid" value="unpaid"/>
+                <element inactive_on_update="false" label="Refunded" value="refunded"/>
+                <element inactive_on_update="false" label="Paid" value="paid"/>
+            </choice>
+        </element>
+        <element label="Discount" max_length="20" name="discount" type="decimal"/>
+        <element label="Tracking Number" max_length="40" name="tracking_number" type="string"/>
+        <element label="Customer Name" max_length="40" name="customer_name" reference="x_1585559_ecommerc_customer" type="reference"/>
+        <element label="Product Quantity" max_length="40" name="product_quantity" type="integer"/>
+        <index name="index">
+            <element name="product_name"/>
+        </index>
+    </element>
+</database>
