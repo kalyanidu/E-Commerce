@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>When order status is shipped then tracking number will get displayed</description>
+        <field>order_status</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Tracking Number Required when Shipped</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+ 
+
+    // Check if status is "Shipped"
+    if (newValue.toLowerCase() === 'shipped') {
+        // Corrected: Generate a random 10-digit number
+        var trackingNumber = Math.floor(1000000000 + Math.random() * 9000000000);
+
+        // Set the tracking number if not already set
+        if (!g_form.getValue('tracking_number')) {
+             g_form.setValue('tracking_number', 'TRX' + trackingNumber.toString());
+        }
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 06:18:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ba518485c3f02210258ad4fc050131b6</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Tracking Number Required when Shipped</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>sys_script_client_ba518485c3f02210258ad4fc050131b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 06:49:51</sys_updated_on>
+        <table>x_1585559_ecommerc_x_1585559_ecommerce</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

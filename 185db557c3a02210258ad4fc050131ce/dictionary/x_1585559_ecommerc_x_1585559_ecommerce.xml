@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="c82eb997c3a02210258ad4fc05013167" label=" E-commerce" max_length="40" name="x_1585559_ecommerc_x_1585559_ecommerce" type="collection">
-        <element label="Order_Id" max_length="40" name="order_id" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Order_Id" max_length="40" name="order_id" read_only="true" type="string"/>
         <element choice="1" label="Payment Method" max_length="40" name="payment_method" type="choice">
             <choice>
                 <element inactive_on_update="false" label="COD" value="cod"/>
