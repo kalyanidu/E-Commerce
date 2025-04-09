@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_producer">
+    <sc_cat_item_producer action="DELETE">
+        <access_type>restricted</access_type>
+        <active>true</active>
+        <allow_edit>false</allow_edit>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <can_cancel>false</can_cancel>
+        <category/>
+        <checked_out>false</checked_out>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p><img title="place_order.jfif" src="/sys_attachment.do?sys_id&#61;a1337419c3702210258ad4fc05013124" alt="" width="87" height="97" /></p>]]></description>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <fulfillment_automation_level>unspecified</fulfillment_automation_level>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <location/>
+        <make_item_non_conversational>false</make_item_non_conversational>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Place New Order</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_save_as_draft>false</no_save_as_draft>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <owner display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</owner>
+        <picture/>
+        <post_insert_script><![CDATA[/**
+* This script is executed after the record is generated. 
+* `current` Is the GlideRecord produced by Record Producer. Use `current.update()` to update the record
+* To access the variables, use `producer.var1` where var1 is the name of the variable
+* To access the Record Producer use `cat_item`
+*/]]></post_insert_script>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=dc72f419c3702210258ad4fc05013170&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <published_ref/>
+        <recurring_frequency/>
+        <redirect_url>catalog_home</redirect_url>
+        <request_method/>
+        <roles/>
+        <save_options/>
+        <save_script><![CDATA[/**
+* This script is executed at every step save in Catalog Builder. 
+* This script is executed before `Script` is executed.
+* `current` Is the GlideRecord produced by Record Producer. 
+* To access the variables, use `producer.var1` where var1 is the name of the variable
+* To access the Record Producer use `cat_item`
+*/]]></save_script>
+        <sc_catalogs/>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <sc_template/>
+        <script><![CDATA[// Create a Request
+var request = new GlideRecord('sc_request');
+request.initialize();
+request.requested_for = gs.getUserID(); // current user
+request.requested_by = gs.getUserID();
+var reqID = request.insert();
+
+// Create Requested Item (RITM)
+var ritm = new GlideRecord('sc_req_item');
+ritm.initialize();
+ritm.request = reqID;
+ritm.requested_for = gs.getUserID();
+ritm.cat_item = current.getValue('sys_id'); // record producer ID
+ritm.short_description = "E-Commerce Product Order";
+var ritmID = ritm.insert();
+
+// Create a new record in your custom E-commerce Order table
+var order = new GlideRecord('x_1585559_ecommerc_order_items'); // use full table name here
+order.initialize();
+order.product_name = current.variables.product_name;
+order.total_price=current.variables.total_price;
+
+order.u_request = request.sys_id; // link the request if you have this field
+order.insert();
+]]></script>
+        <short_description>For Placing new order</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <state>published</state>
+        <sys_class_name>sc_cat_item_producer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 04:32:21</sys_created_on>
+        <sys_id>dc72f419c3702210258ad4fc05013170</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>Place New Order</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>sc_cat_item_producer_dc72f419c3702210258ad4fc05013170</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-09 04:55:08</sys_updated_on>
+        <table_name>x_1585559_ecommerc_x_1585559_ecommerce</table_name>
+        <taxonomy_topic display_value="Technology services">06d3df67c3053010069aec4b7d40dd70</taxonomy_topic>
+        <template/>
+        <template_manager_roles/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <version>36</version>
+        <view/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_producer>
+    <sys_translated_text action="DELETE" query="documentkey=dc72f419c3702210258ad4fc05013170"/>
+    <fx_price action="DELETE" query="id=dc72f419c3702210258ad4fc05013170"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>dc72f419c3702210258ad4fc05013170</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 04:32:22</sys_created_on>
+        <sys_id>f803b0d5c3702210258ad4fc05013140</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-08 04:32:22</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_attachment action="DELETE">
+        <average_image_color>#f8dadb</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/jpeg</content_type>
+        <file_name>place_order.jfif</file_name>
+        <hash>4f7834ce7c212ace6b09cbac7e7e2e50ea058feacab40e8ff9a74ac89e3fa426</hash>
+        <image_height>180</image_height>
+        <image_width>163</image_width>
+        <size_bytes>5245</size_bytes>
+        <size_compressed>5101</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 04:33:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a1337419c3702210258ad4fc05013124</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-08 04:33:15</sys_updated_on>
+        <table_name>sc_cat_item_producer</table_name>
+        <table_sys_id>dc72f419c3702210258ad4fc05013170</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="DELETE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="place_order.jfif" sys_id="a1337419c3702210258ad4fc05013124">a1337419c3702210258ad4fc05013124</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 04:33:14</sys_created_on>
+        <sys_id>e1337419c3702210258ad4fc05013124</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="DELETE">
+        <data>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</data>
+        <length>6788</length>
+        <position>1</position>
+        <sys_attachment display_value="place_order.jfif" sys_id="a1337419c3702210258ad4fc05013124">a1337419c3702210258ad4fc05013124</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 04:33:14</sys_created_on>
+        <sys_id>65337419c3702210258ad4fc05013124</sys_id>
+    </sys_attachment_doc>
+    <sys_es_latest_script action="DELETE">
+        <id>dc72f419c3702210258ad4fc05013170</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 04:32:20</sys_created_on>
+        <sys_id>20033455c3302210258ad4fc05013130</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-08 04:32:20</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</application>
+        <file_path/>
+        <instance_id>00dacfbdeb689ad4cbdefceacad0cde1</instance_id>
+        <instance_name>dev288583</instance_name>
+        <name>sc_cat_item_producer_dc72f419c3702210258ad4fc05013170</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sc_cat_item_producer"&gt;&lt;sc_cat_item_producer action="INSERT_OR_UPDATE"&gt;&lt;access_type&gt;restricted&lt;/access_type&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_edit&gt;false&lt;/allow_edit&gt;&lt;availability&gt;on_desktop&lt;/availability&gt;&lt;billable&gt;false&lt;/billable&gt;&lt;can_cancel&gt;false&lt;/can_cancel&gt;&lt;category/&gt;&lt;checked_out&gt;false&lt;/checked_out&gt;&lt;cost&gt;0&lt;/cost&gt;&lt;custom_cart/&gt;&lt;delivery_plan display_value="DEFAULT"&gt;523da512c611228900811a37c97c2014&lt;/delivery_plan&gt;&lt;delivery_plan_script/&gt;&lt;delivery_time&gt;1970-01-03 00:00:00&lt;/delivery_time&gt;&lt;description&gt;&lt;![CDATA[&lt;p&gt;&lt;img title="place_order.jfif" src="/sys_attachment.do?sys_id&amp;#61;a1337419c3702210258ad4fc05013124" alt="" width="87" height="97" /&gt;&lt;/p&gt;]]&gt;&lt;/description&gt;&lt;display_price_property&gt;non_zero&lt;/display_price_property&gt;&lt;entitlement_script/&gt;&lt;flow_designer_flow/&gt;&lt;fulfillment_automation_level&gt;unspecified&lt;/fulfillment_automation_level&gt;&lt;group/&gt;&lt;hide_sp&gt;false&lt;/hide_sp&gt;&lt;icon/&gt;&lt;ignore_price&gt;true&lt;/ignore_price&gt;&lt;image/&gt;&lt;location/&gt;&lt;make_item_non_conversational&gt;false&lt;/make_item_non_conversational&gt;&lt;mandatory_attachment&gt;false&lt;/mandatory_attachment&gt;&lt;meta/&gt;&lt;mobile_hide_price&gt;false&lt;/mobile_hide_price&gt;&lt;mobile_picture/&gt;&lt;mobile_picture_type&gt;use_desktop_picture&lt;/mobile_picture_type&gt;&lt;model/&gt;&lt;name&gt;Place New Order&lt;/name&gt;&lt;no_attachment_v2&gt;false&lt;/no_attachment_v2&gt;&lt;no_cart&gt;false&lt;/no_cart&gt;&lt;no_cart_v2&gt;false&lt;/no_cart_v2&gt;&lt;no_delivery_time_v2&gt;false&lt;/no_delivery_time_v2&gt;&lt;no_order&gt;false&lt;/no_order&gt;&lt;no_order_now&gt;false&lt;/no_order_now&gt;&lt;no_proceed_checkout&gt;false&lt;/no_proceed_checkout&gt;&lt;no_quantity&gt;false&lt;/no_quantity&gt;&lt;no_quantity_v2&gt;false&lt;/no_quantity_v2&gt;&lt;no_save_as_draft&gt;false&lt;/no_save_as_draft&gt;&lt;no_search&gt;false&lt;/no_search&gt;&lt;no_wishlist_v2&gt;false&lt;/no_wishlist_v2&gt;&lt;omit_price&gt;false&lt;/omit_price&gt;&lt;order&gt;0&lt;/order&gt;&lt;ordered_item_link/&gt;&lt;owner display_value="System Administrator"&gt;6816f79cc0a8016401c5a33be04be441&lt;/owner&gt;&lt;picture/&gt;&lt;post_insert_script&gt;&lt;![CDATA[/**
+* This script is executed after the record is generated. 
+* `current` Is the GlideRecord produced by Record Producer. Use `current.update()` to update the record
+* To access the variables, use `producer.var1` where var1 is the name of the variable
+* To access the Record Producer use `cat_item`
+*/]]&gt;&lt;/post_insert_script&gt;&lt;preview&gt;JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;amp;sysparm_id=dc72f419c3702210258ad4fc05013170&amp;amp;sysparm_preview=true", "summary");&lt;/preview&gt;&lt;price&gt;0&lt;/price&gt;&lt;published_ref/&gt;&lt;recurring_frequency/&gt;&lt;redirect_url&gt;catalog_home&lt;/redirect_url&gt;&lt;request_method/&gt;&lt;roles/&gt;&lt;save_options/&gt;&lt;save_script&gt;&lt;![CDATA[/**
+* This script is executed at every step save in Catalog Builder. 
+* This script is executed before `Script` is executed.
+* `current` Is the GlideRecord produced by Record Producer. 
+* To access the variables, use `producer.var1` where var1 is the name of the variable
+* To access the Record Producer use `cat_item`
+*/]]&gt;&lt;/save_script&gt;&lt;sc_catalogs/&gt;&lt;sc_ic_item_staging/&gt;&lt;sc_ic_version/&gt;&lt;sc_template/&gt;&lt;script&gt;&lt;![CDATA[// Create a Request
+var request = new GlideRecord('sc_request');
+request.initialize();
+request.requested_for = gs.getUserID(); // current user
+request.requested_by = gs.getUserID();
+var reqID = request.insert();
+
+// Create Requested Item (RITM)
+var ritm = new GlideRecord('sc_req_item');
+ritm.initialize();
+ritm.request = reqID;
+ritm.requested_for = gs.getUserID();
+ritm.cat_item = current.getValue('sys_id'); // record producer ID
+ritm.short_description = "E-Commerce Product Order";
+var ritmID = ritm.insert();
+
+// Create a new record in your custom E-commerce Order table
+var order = new GlideRecord('x_1585559_ecommerc_order_items'); // use full table name here
+order.initialize();
+order.product_name = current.variables.product_name;
+order.total_price=current.variables.total_price;
+
+order.u_request = request.sys_id; // link the request if you have this field
+order.insert();
+]]&gt;&lt;/script&gt;&lt;short_description&gt;For Placing new order&lt;/short_description&gt;&lt;show_variable_help_on_load&gt;false&lt;/show_variable_help_on_load&gt;&lt;start_closed&gt;false&lt;/start_closed&gt;&lt;state&gt;published&lt;/state&gt;&lt;sys_class_name&gt;sc_cat_item_producer&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-08 04:32:21&lt;/sys_created_on&gt;&lt;sys_id&gt;dc72f419c3702210258ad4fc05013170&lt;/sys_id&gt;&lt;sys_mod_count&gt;37&lt;/sys_mod_count&gt;&lt;sys_name&gt;Place New Order&lt;/sys_name&gt;&lt;sys_package display_value="Ecommerce" source="x_1585559_ecommerc"&gt;185db557c3a02210258ad4fc050131ce&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ecommerce"&gt;185db557c3a02210258ad4fc050131ce&lt;/sys_scope&gt;&lt;sys_update_name&gt;sc_cat_item_producer_dc72f419c3702210258ad4fc05013170&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-04-09 04:55:08&lt;/sys_updated_on&gt;&lt;table_name&gt;x_1585559_ecommerc_x_1585559_ecommerce&lt;/table_name&gt;&lt;taxonomy_topic display_value="Technology services"&gt;06d3df67c3053010069aec4b7d40dd70&lt;/taxonomy_topic&gt;&lt;template/&gt;&lt;template_manager_roles/&gt;&lt;type&gt;item&lt;/type&gt;&lt;use_sc_layout&gt;true&lt;/use_sc_layout&gt;&lt;vendor/&gt;&lt;version&gt;36&lt;/version&gt;&lt;view/&gt;&lt;visible_bundle&gt;true&lt;/visible_bundle&gt;&lt;visible_guide&gt;true&lt;/visible_guide&gt;&lt;visible_standalone&gt;true&lt;/visible_standalone&gt;&lt;workflow/&gt;&lt;/sc_cat_item_producer&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=dc72f419c3702210258ad4fc05013170"/&gt;&lt;fx_price action="delete_multiple" query="id=dc72f419c3702210258ad4fc05013170"/&gt;&lt;fx_price action="INSERT_OR_UPDATE"&gt;&lt;amount&gt;0&lt;/amount&gt;&lt;currency display_value="USD"&gt;USD&lt;/currency&gt;&lt;field&gt;price&lt;/field&gt;&lt;id&gt;dc72f419c3702210258ad4fc05013170&lt;/id&gt;&lt;parent/&gt;&lt;reference_amount&gt;0&lt;/reference_amount&gt;&lt;reference_currency display_value="USD"&gt;USD&lt;/reference_currency&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-08 04:32:22&lt;/sys_created_on&gt;&lt;sys_id&gt;f803b0d5c3702210258ad4fc05013140&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-04-08 04:32:22&lt;/sys_updated_on&gt;&lt;table&gt;sc_cat_item_producer&lt;/table&gt;&lt;type&gt;calculated&lt;/type&gt;&lt;/fx_price&gt;&lt;sys_attachment action="INSERT_OR_UPDATE"&gt;&lt;average_image_color&gt;#f8dadb&lt;/average_image_color&gt;&lt;chunk_size_bytes&gt;700000&lt;/chunk_size_bytes&gt;&lt;compressed&gt;true&lt;/compressed&gt;&lt;content_type&gt;image/jpeg&lt;/content_type&gt;&lt;file_name&gt;place_order.jfif&lt;/file_name&gt;&lt;hash&gt;4f7834ce7c212ace6b09cbac7e7e2e50ea058feacab40e8ff9a74ac89e3fa426&lt;/hash&gt;&lt;image_height&gt;180&lt;/image_height&gt;&lt;image_width&gt;163&lt;/image_width&gt;&lt;size_bytes&gt;5245&lt;/size_bytes&gt;&lt;size_compressed&gt;5101&lt;/size_compressed&gt;&lt;state&gt;available&lt;/state&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-08 04:33:14&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;a1337419c3702210258ad4fc05013124&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-04-08 04:33:15&lt;/sys_updated_on&gt;&lt;table_name&gt;sc_cat_item_producer&lt;/table_name&gt;&lt;table_sys_id&gt;dc72f419c3702210258ad4fc05013170&lt;/table_sys_id&gt;&lt;/sys_attachment&gt;&lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;&lt;data&gt;H4sIAAAAAAAA/w==&lt;/data&gt;&lt;length&gt;16&lt;/length&gt;&lt;position&gt;0&lt;/position&gt;&lt;sys_attachment display_value="place_order.jfif" sys_id="a1337419c3702210258ad4fc05013124"&gt;a1337419c3702210258ad4fc05013124&lt;/sys_attachment&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-08 04:33:14&lt;/sys_created_on&gt;&lt;sys_id&gt;e1337419c3702210258ad4fc05013124&lt;/sys_id&gt;&lt;/sys_attachment_doc&gt;&lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;&lt;data&gt;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&lt;/data&gt;&lt;length&gt;6788&lt;/length&gt;&lt;position&gt;1&lt;/position&gt;&lt;sys_attachment display_value="place_order.jfif" sys_id="a1337419c3702210258ad4fc05013124"&gt;a1337419c3702210258ad4fc05013124&lt;/sys_attachment&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-08 04:33:14&lt;/sys_created_on&gt;&lt;sys_id&gt;65337419c3702210258ad4fc05013124&lt;/sys_id&gt;&lt;/sys_attachment_doc&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;dc72f419c3702210258ad4fc05013170&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-08 04:32:20&lt;/sys_created_on&gt;&lt;sys_id&gt;20033455c3302210258ad4fc05013130&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-04-08 04:32:20&lt;/sys_updated_on&gt;&lt;table&gt;sc_cat_item_producer&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>0</payload_hash>
+        <record_name>Place New Order</record_name>
+        <reverted_from/>
+        <source>ac2d57f4c3302210258ad4fc0501319e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-09 04:55:09</sys_created_on>
+        <sys_id>90d14261c3702210258ad4fc050131ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19618e6ec220000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-09 04:55:09</sys_updated_on>
+        <type>Record Producer</type>
+        <update_guid>18d14261ff702210542e49db064790ab</update_guid>
+        <update_guid_history>18d14261ff702210542e49db064790ab:1164709346,2e2771256c302210204e83bed607b476:1315334319,3d95ed99887422104a8d790a9d95bebf:-1416910522,1d3f899dd5f02210cd036b7c1ef5767e:-159244115,316e895d92f022100c4f578d0e879d78:-1357829104,b56e895d51f02210b6bc25427b246e62:661294125,3d6e895d23f022103117edfa5afa0756:2071488556,f96e895de6f022107f91644139d0163e:-813284309,e56e895d2df022100d44c09ef7eb8332:596910122,b41ec15d6cf022105fd984cacb6fc543:2007104553,49ecc5d942f022100c2f10ca350f80df:1038617476,01ecc5d911f02210ca7f5cc3e71f3dd6:-1252268986,cdecc5d966f022108eb2a1bcc453d8bd:157925445,45ecc5d909f022108934c2ca29cac5b2:1568119876,49ecc5d938f02210029da6525af4ca99:-1767341010,f487891556f022109160bd38ac0a5510:-357146579,34878915acf02210e77a83a3127b1407:-1683904030,b887491575f02210972b8a875e0ab9fb:-273709599,78874915ecf02210ab5c79d3207371e3:685796811,bc874915aaf022103b57ebfefd4d70ca:2095991242,fb278115fef02210c29ee7ebfcedb872:-788781623,2f070dd146f02210a17cddf43820a875:-509721929,2dc385dd2bb02210c68414b0422a31c3:900472502,95c385ddddb02210bb14c8f6a1e0b2ba:-2094016867,55c385ddfcb0221007584aecb10d71ae:-683822436,d9c385ddbdb02210ecf53d22470c4aa2:726371995,99c385dd1ab02210190c23a12199428a:2136566426,99c385ddb0b02210f8e422916614977e:-748206439,98f2819db9b02210ea44a5bb46d9a725:661987992,aee2419d25b02210ea1a37b4bfa3269d:2072182423,cde24d5d02b02210a4a49682b75712f1:-812590442,5bd2cd5da5b02210ea9921f5e6040ff9:597603989,34a2495daeb0221082008987577ef35d:2007798420,d4a2095d6cb022107ea9db7c563032e1:304867143,98a2095d08b022106f5ca72cbd29a8ba:1528944550,7cbf74593db0221096a0e3d3a3f55d4c:1299317110,aa7f30d56cb02210d1f397bae244d93f:-1585455755,416fbc198cb02210902309b992fa4345:-175261324,575fb41935b02210cf082db1cb86a7ca:1234933107,255f7c1939b022105fdffda2159c388d:-1649839758,fc4f3c1922b02210fa54853b7d95a728:-239645327,d73ff81906b02210fed598cc650a516e:1170549104,ec2f7819bcb0221062297d6bfdc4b231:-1714223761,17ee3419ceb0221061422de03630b857:-304029330,b20d3095b9b022109f9011a30ec6ab6d:1106165101,f8bb74150cb02210e1af0a263f42106c:702563145,14b8781127b02210ec850b2246643a46:-1845136268,1277bc9dd4702210164c929723c82872:-434941837,31b6bc5daf702210c3b6ca43382c31d0:975252594,95567cd9817022106089416c5068c151:-1909520271,fa043899a4702210671310a5bfdc541d:-499325840,4ac3b0991770221072c7ca84737d694a:910868591,df63b85997702210021b26c77e92de8d:-1973904274,a533b4598470221016a897731cd06774:-345984172,0903b0592170221063b6cda94eaca13b:-263966590,cd03b0599d702210f87fc0a47d00e633:22619562</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Place New Order">10d14261c3702210258ad4fc050131b1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-09 04:55:09</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_producer">sc_cat_item_producer</sys_db_object>
+        <sys_id>13c61d59fc82447ca2e0950159fd4d41</sys_id>
+        <sys_metadata>dc72f419c3702210258ad4fc05013170</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Place New Order</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_parent display_value=" E-commerce">c82eb997c3a02210258ad4fc05013167</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_scope_delete display_value="">a0e2861d80604c18bf1195f2b42efec4</sys_scope_delete>
+        <sys_update_name>sc_cat_item_producer_dc72f419c3702210258ad4fc05013170</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_producer_dc72f419c3702210258ad4fc05013170">90d14261c3702210258ad4fc050131ac</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-09 04:55:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

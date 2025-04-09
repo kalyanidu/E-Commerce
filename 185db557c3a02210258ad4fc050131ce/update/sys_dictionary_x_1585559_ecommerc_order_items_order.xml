@@ -40,7 +40,7 @@
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="x_1585559_ecommerc_x_1585559_ecommerce">x_1585559_ecommerc_x_1585559_ecommerce</reference>
+        <reference display_value="" name="x_1585559_ecommerc_product">x_1585559_ecommerc_product</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -58,7 +58,7 @@
         <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
         <sys_update_name>sys_dictionary_x_1585559_ecommerc_order_items_order</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-02 06:23:52</sys_updated_on>
+        <sys_updated_on>2025-04-08 06:15:11</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
