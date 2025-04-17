@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="INSERT_OR_UPDATE">
+        <action>record_action</action>
+        <active>true</active>
+        <assignment_operator/>
+        <condition_script/>
+        <description>Hey team,&#13;
+  this is for testing</description>
+        <event_name>email.read</event_name>
+        <filter_condition/>
+        <from display_value="Kalyani Dudhekar">de822372c3a31210258ad4fc05013185</from>
+        <name>Testing Inbound  Action</name>
+        <order>100</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[(function runAction(email, email_action, event) {
+    var lines = email.body_text.split('\n');
+    var callerEmail = lines[0].trim();
+    var shortDesc = lines[1].trim();
+
+    // Set caller
+    var userGR = new GlideRecord('sys_user');
+    userGR.addQuery('email', callerEmail);
+    userGR.query();
+    if (userGR.next()) {
+        incident.caller_id = userGR.sys_id;
+    }
+
+    // Set other fields
+    incident.impact = 2; // Medium
+    incident.urgency = 3; // Low
+    incident.assignment_group.setDisplayValue('Incident Management');
+    incident.short_description = shortDesc;
+    incident.description = email.body_text;
+
+})(email, email_action, event);
+]]></script>
+        <stop_processing>false</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 07:27:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ae0ddd27c3302210258ad4fc050131c8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Testing Inbound  Action</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>sysevent_in_email_action_ae0ddd27c3302210258ad4fc050131c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 07:35:32</sys_updated_on>
+        <table>incident</table>
+        <template>impact=2^urgency=3^assignment_group=12a586cd0bb23200ecfd818393673a30^caller_idDYNAMIC2fd8e97bef3221002841f7f775c0fbc1^EQ</template>
+        <type>new</type>
+    </sysevent_in_email_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>ae0ddd27c3302210258ad4fc050131c8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 07:27:03</sys_created_on>
+        <sys_id>cc2e5167c3302210258ad4fc050131d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 07:27:03</sys_updated_on>
+        <table>sysevent_in_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

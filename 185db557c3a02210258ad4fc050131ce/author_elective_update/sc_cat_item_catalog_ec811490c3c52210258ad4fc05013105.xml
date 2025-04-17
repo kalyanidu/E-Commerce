@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="E-commerce">90819090c3c52210258ad4fc050131fd</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-17 09:47:44</sys_created_on>
+        <sys_id>ec811490c3c52210258ad4fc05013105</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.E-commerce</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_ec811490c3c52210258ad4fc05013105</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-17 09:47:44</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</application>
+        <file_path/>
+        <instance_id>00dacfbdeb689ad4cbdefceacad0cde1</instance_id>
+        <instance_name>dev288583</instance_name>
+        <name>sc_cat_item_catalog_ec811490c3c52210258ad4fc05013105</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="E-commerce">90819090c3c52210258ad4fc050131fd</sc_cat_item><sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-17 09:47:44</sys_created_on><sys_id>ec811490c3c52210258ad4fc05013105</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Service Catalog.E-commerce</sys_name><sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package><sys_policy/><sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope><sys_update_name>sc_cat_item_catalog_ec811490c3c52210258ad4fc05013105</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-17 09:47:44</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>2070209293</payload_hash>
+        <record_name>Service Catalog.E-commerce</record_name>
+        <reverted_from/>
+        <source>ac2d57f4c3302210258ad4fc0501319e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-17 09:47:44</sys_created_on>
+        <sys_id>68811490c3c52210258ad4fc05013109</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1964325ad8c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-17 09:47:44</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>6c81149048c522100ad21fa439ca9408</update_guid>
+        <update_guid_history>6c81149048c522100ad21fa439ca9408:2070209293</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Service Catalog.E-commerce">61c1d490c3c52210258ad4fc050131bc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-17 09:48:54</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>61b8329fc2e948c2ab44b446b86ff2b1</sys_id>
+        <sys_metadata>ec811490c3c52210258ad4fc05013105</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.E-commerce</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_parent display_value="">90819090c3c52210258ad4fc050131fd</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_scope_delete display_value="">a0e2861d80604c18bf1195f2b42efec4</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_ec811490c3c52210258ad4fc05013105</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_ec811490c3c52210258ad4fc05013105">68811490c3c52210258ad4fc05013109</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-17 09:48:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

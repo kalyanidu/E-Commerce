@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="e432d6dfc3e02210258ad4fc0501319d" label="Ordered  Items" max_length="40" name="x_1585559_ecommerc_order_items" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Price per unit" max_length="20" name="price_per_unit" type="currency"/>
+        <element choice="1" display="true" label="Payment Method" mandatory="true" max_length="40" name="payment_method" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="COD" value="cod"/>
+                <element inactive_on_update="false" label="Net-Banking" value="net-banking"/>
+                <element inactive_on_update="false" label="Credit-Card" value="credit-card"/>
+            </choice>
+        </element>
         <element label="Total Price" max_length="20" name="total_price" reference="x_1585559_ecommerc_product" type="currency"/>
         <element label="Order" max_length="32" name="order" reference="x_1585559_ecommerc_product" type="reference"/>
-        <element label="Product Name" max_length="40" name="product_name" reference="x_1585559_ecommerc_product" type="string"/>
+        <element label="Product Name" mandatory="true" max_length="40" name="product_name" reference="x_1585559_ecommerc_product" type="reference"/>
+        <element label="Shipping Address" mandatory="true" max_length="255" name="shipping_address" type="string"/>
         <element label="Quantity" max_length="40" name="quantity" reference="x_1585559_ecommerc_product" type="integer"/>
         <index name="index">
             <element name="order"/>

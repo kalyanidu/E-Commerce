@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="product_name" table="x_1585559_ecommerc_order_items">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="number" table="x_1585559_ecommerc_order_items">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>ignore_filter_on_new=true</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -13,10 +13,10 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Product Name</column_label>
+        <column_label>Number</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>javascript:global.getNextObjNumberPadded();</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -26,21 +26,21 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>product_name</element>
+        <element>number</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Reference">reference</internal_type>
-        <mandatory>true</mandatory>
+        <internal_type display_value="String">string</internal_type>
+        <mandatory>false</mandatory>
         <max_length>40</max_length>
         <name>x_1585559_ecommerc_order_items</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="x_1585559_ecommerc_product">x_1585559_ecommerc_product</reference>
+        <reference/>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -51,14 +51,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-04-02 06:23:53</sys_created_on>
-        <sys_name>Product Name</sys_name>
+        <sys_created_on>2025-04-16 06:33:55</sys_created_on>
+        <sys_name>Number</sys_name>
         <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
         <sys_policy/>
         <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
-        <sys_update_name>sys_dictionary_x_1585559_ecommerc_order_items_product_name</sys_update_name>
+        <sys_update_name>sys_dictionary_x_1585559_ecommerc_order_items_number</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-16 06:43:00</sys_updated_on>
+        <sys_updated_on>2025-04-16 06:33:55</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

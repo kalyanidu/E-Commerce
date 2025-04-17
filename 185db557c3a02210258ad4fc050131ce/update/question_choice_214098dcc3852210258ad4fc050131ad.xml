@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="Payment Method">f4afc4dcc3852210258ad4fc050131eb</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-17 09:42:42</sys_created_on>
+        <sys_id>214098dcc3852210258ad4fc050131ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Credit-Card</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>question_choice_214098dcc3852210258ad4fc050131ad</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-17 09:42:42</sys_updated_on>
+        <text>Credit-Card</text>
+        <value>credit-card</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=214098dcc3852210258ad4fc050131ad"/>
+</record_update>

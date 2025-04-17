@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="Place new order">f9c55afbc3302210258ad4fc050131ea</sc_cat_item>
+        <sc_catalog display_value="Technical Catalog">742ce428d7211100f2d224837e61036d</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-16 06:54:30</sys_created_on>
+        <sys_id>4940ee7bc3702210258ad4fc05013186</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technical Catalog.Place new order</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_4940ee7bc3702210258ad4fc05013186</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-16 06:54:30</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</application>
+        <file_path/>
+        <instance_id>00dacfbdeb689ad4cbdefceacad0cde1</instance_id>
+        <instance_name>dev288583</instance_name>
+        <name>sc_cat_item_catalog_4940ee7bc3702210258ad4fc05013186</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="Place new order">f9c55afbc3302210258ad4fc050131ea</sc_cat_item><sc_catalog display_value="Technical Catalog">742ce428d7211100f2d224837e61036d</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-16 06:54:30</sys_created_on><sys_id>4940ee7bc3702210258ad4fc05013186</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Technical Catalog.Place new order</sys_name><sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package><sys_policy/><sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope><sys_update_name>sc_cat_item_catalog_4940ee7bc3702210258ad4fc05013186</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-16 06:54:30</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>1058875049</payload_hash>
+        <record_name>Technical Catalog.Place new order</record_name>
+        <reverted_from/>
+        <source>ac2d57f4c3302210258ad4fc0501319e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-16 06:54:31</sys_created_on>
+        <sys_id>854022bbc3702210258ad4fc05013145</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1963d60b8d00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-16 06:54:31</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>894022bb2b702210db48cd2daef92d44</update_guid>
+        <update_guid_history>894022bb2b702210db48cd2daef92d44:1058875049</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Technical Catalog.Place new order">a2c0a2fbc3702210258ad4fc05013141</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-16 06:56:48</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>266b6e877ca94132be5028f6a9d87504</sys_id>
+        <sys_metadata>4940ee7bc3702210258ad4fc05013186</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technical Catalog.Place new order</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_parent display_value="Place new order">f9c55afbc3302210258ad4fc050131ea</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_scope_delete display_value="">a0e2861d80604c18bf1195f2b42efec4</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_4940ee7bc3702210258ad4fc05013186</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_4940ee7bc3702210258ad4fc05013186">854022bbc3702210258ad4fc05013145</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-16 06:56:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
