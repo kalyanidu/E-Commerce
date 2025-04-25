@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Payment Method is Credit Card</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-18 04:17:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>242f88acc3496210258ad4fc05013134</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Payment Method is Credit Card</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>sys_ui_policy_242f88acc3496210258ad4fc05013134</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-18 04:17:22</sys_updated_on>
+        <table>x_1585559_ecommerc_x_1585559_ecommerce</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</application>
+        <file_path/>
+        <instance_id>00dacfbdeb689ad4cbdefceacad0cde1</instance_id>
+        <instance_name>dev288583</instance_name>
+        <name>sys_ui_policy_242f88acc3496210258ad4fc05013134</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions/&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Payment Method is Credit Card&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-18 04:17:22&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;242f88acc3496210258ad4fc05013134&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Payment Method is Credit Card&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Ecommerce" source="x_1585559_ecommerc"&gt;185db557c3a02210258ad4fc050131ce&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ecommerce"&gt;185db557c3a02210258ad4fc050131ce&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_242f88acc3496210258ad4fc05013134&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-04-18 04:17:22&lt;/sys_updated_on&gt;&lt;table&gt;x_1585559_ecommerc_x_1585559_ecommerce&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1351619088</payload_hash>
+        <record_name>Payment Method is Credit Card</record_name>
+        <reverted_from/>
+        <source>ac2d57f4c3302210258ad4fc0501319e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-18 04:17:22</sys_created_on>
+        <sys_id>fe7f00ecc3496210258ad4fc050131d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>196471d928c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-18 04:17:22</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>b27f00ecb84962107efe93a99d5e16d0</update_guid>
+        <update_guid_history>b27f00ecb84962107efe93a99d5e16d0:1351619088</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-18 04:23:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>2c98ec6bcb4846c58af9bbf4cacb5671</sys_id>
+        <sys_metadata>242f88acc3496210258ad4fc05013134</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Payment Method is Credit Card</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_parent display_value=" E-commerce">c82eb997c3a02210258ad4fc05013167</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_scope_delete display_value="">a0e2861d80604c18bf1195f2b42efec4</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_242f88acc3496210258ad4fc05013134</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_242f88acc3496210258ad4fc05013134">fe7f00ecc3496210258ad4fc050131d0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-18 04:23:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

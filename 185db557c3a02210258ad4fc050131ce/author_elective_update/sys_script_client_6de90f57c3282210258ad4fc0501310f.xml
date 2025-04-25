@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>On change of order as shipped </description>
+        <field>order_status</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Auto Populate Tracking no</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue !== 'Shipped') {
+        return;
+    }
+
+    // Generate a random tracking number
+    var trackingNumber = 'TRK' + new GlideSysID().toString();
+
+    // Set the tracking number field
+    g_form.setValue('tracking_number', trackingNumber);
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-02 10:24:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6de90f57c3282210258ad4fc0501310f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Auto Populate Tracking no</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_update_name>sys_script_client_6de90f57c3282210258ad4fc0501310f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-02 10:30:40</sys_updated_on>
+        <table>x_1585559_ecommerc_x_1585559_ecommerce</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</application>
+        <file_path/>
+        <instance_id>00dacfbdeb689ad4cbdefceacad0cde1</instance_id>
+        <instance_name>dev288583</instance_name>
+        <name>sys_script_client_6de90f57c3282210258ad4fc0501310f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;On change of order as shipped &lt;/description&gt;&lt;field&gt;order_status&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Auto Populate Tracking no&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue !== 'Shipped') {
+        return;
+    }
+
+    // Generate a random tracking number
+    var trackingNumber = 'TRK' + new GlideSysID().toString();
+
+    // Set the tracking number field
+    g_form.setValue('tracking_number', trackingNumber);
+}
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-02 10:24:36&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;6de90f57c3282210258ad4fc0501310f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Auto Populate Tracking no&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Ecommerce" source="x_1585559_ecommerc"&gt;185db557c3a02210258ad4fc050131ce&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ecommerce"&gt;185db557c3a02210258ad4fc050131ce&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_6de90f57c3282210258ad4fc0501310f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-04-02 10:30:40&lt;/sys_updated_on&gt;&lt;table&gt;x_1585559_ecommerc_x_1585559_ecommerce&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-141532752</payload_hash>
+        <record_name>Auto Populate Tracking no</record_name>
+        <reverted_from/>
+        <source>dc5db557c3a02210258ad4fc050131d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-02 10:30:40</sys_created_on>
+        <sys_id>4b7b4bd7c3282210258ad4fc05013111</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195f60d954e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-02 10:30:40</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>037b4bd77b2822104b7fffe7fe4d1311</update_guid>
+        <update_guid_history>037b4bd77b2822104b7fffe7fe4d1311:-141532752,4a1a4b17da28221066733fdfd91c7e43:-2023477654</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-18 01:39:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>167fe55cf6c44fd78263582d996b9779</sys_id>
+        <sys_metadata>6de90f57c3282210258ad4fc0501310f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto Populate Tracking no</sys_name>
+        <sys_package display_value="Ecommerce" source="x_1585559_ecommerc">185db557c3a02210258ad4fc050131ce</sys_package>
+        <sys_parent display_value=" E-commerce">c82eb997c3a02210258ad4fc05013167</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Ecommerce">185db557c3a02210258ad4fc050131ce</sys_scope>
+        <sys_scope_delete display_value="">a0e2861d80604c18bf1195f2b42efec4</sys_scope_delete>
+        <sys_update_name>sys_script_client_6de90f57c3282210258ad4fc0501310f</sys_update_name>
+        <sys_update_version display_value="sys_script_client_6de90f57c3282210258ad4fc0501310f">4b7b4bd7c3282210258ad4fc05013111</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-18 01:39:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
